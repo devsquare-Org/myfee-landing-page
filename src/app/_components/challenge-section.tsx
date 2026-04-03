@@ -20,16 +20,30 @@ export default function ChallengeSection() {
         <div className="shrink-0 md:w-[42%]">
           <p className="mb-3 text-lg font-bold text-[#E64794]">CHALLENGE.</p>
           <motion.p
-            className="text-[28px] font-bold leading-tight md:text-[36px]"
+            className="text-[28px] font-bold leading-tight md:text-[48px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             함께해서 즐거운 도전.
-            <br />
+          </motion.p>
+          <motion.p
+            className="text-[28px] font-bold leading-tight md:text-[48px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+          >
             선물처럼
-            <br />
+          </motion.p>
+          <motion.p
+            className="text-[28px] font-bold leading-tight md:text-[48px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+          >
             찾아오는 혜택
           </motion.p>
           <motion.p

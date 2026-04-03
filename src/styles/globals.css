@@ -157,3 +157,12 @@
     transform: translateX(-50%);
   }
 }
+
+@keyframes bento-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-3170px - 10px));
+  }
+}
