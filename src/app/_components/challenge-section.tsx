@@ -87,10 +87,6 @@ export default function ChallengeSection() {
                 src={current.src}
                 alt={current.label}
                 className="absolute left-0 top-0 w-full"
-                style={{
-                  filter:
-                    "drop-shadow(0 25px 50px rgba(0,0,0,0.25)) drop-shadow(0 10px 20px rgba(0,0,0,0.15))",
-                }}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, transition: { duration: 0 } }}
@@ -104,9 +100,6 @@ export default function ChallengeSection() {
                   src="/images/challenge_4.avif"
                   alt="500P 포인트"
                   className="pointer-events-none absolute -right-8 top-[35%] z-10 w-[120px] md:-right-10 md:w-[140px]"
-                  style={{
-                    filter: "drop-shadow(0 10px 25px rgba(230,71,148,0.35))",
-                  }}
                   initial={{ opacity: 0, y: 40, rotate: -12 }}
                   animate={{
                     opacity: 1,
