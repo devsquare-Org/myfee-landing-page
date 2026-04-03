@@ -1,7 +1,13 @@
 "use client";
 
+import { useCallback } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
+
+const APPSTORE_URL =
+  "https://apps.apple.com/app/myfee/id6742517498";
+const PLAYSTORE_URL =
+  "https://play.google.com/store/apps/details?id=com.myfee.app";
 
 const GRID_W = 3170;
 const GRID_H = 360;
@@ -188,6 +194,12 @@ function BentoGrid({ keyPrefix = "" }: { keyPrefix?: string }) {
 export default function CtaSection() {
   const isMobile = useIsMobile();
 
+  const handleDownload = useCallback(() => {
+    const ua = navigator.userAgent;
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+    window.open(isIOS ? APPSTORE_URL : PLAYSTORE_URL, "_blank");
+  }, []);
+
   return (
     <div className="pt-[100px] md:pt-[120px] pb-[40px] md:pb-[60px]">
       <p className="text-[28px] font-bold md:text-[48px] text-center">
@@ -206,6 +218,7 @@ export default function CtaSection() {
       {isMobile && (
         <button
           type="button"
+          onClick={handleDownload}
           className="bg-[#31d7cd] text-white px-5 py-3 rounded-full font-bold mx-auto block mt-8"
         >
           지금 다운로드
