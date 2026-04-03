@@ -19,20 +19,32 @@ export default function ChallengeSection() {
       <div className="flex flex-col gap-10 p-8 md:flex-row md:p-14">
         <div className="shrink-0 md:w-[42%]">
           <p className="mb-3 text-lg font-bold text-[#E64794]">CHALLENGE.</p>
-          <h2 className="text-[28px] font-bold leading-tight md:text-[36px]">
+          <motion.p
+            className="text-[28px] font-bold leading-tight md:text-[36px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             함께해서 즐거운 도전.
             <br />
             선물처럼
             <br />
             찾아오는 혜택
-          </h2>
-          <p className="mt-8 text-[15px] leading-relaxed text-gray-500 md:text-[17px]">
+          </motion.p>
+          <motion.p
+            className="mt-8 text-[15px] leading-relaxed text-gray-500 md:text-[17px]"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
+          >
             혼자 하면 작심삼일이지만 함께라면
             <br />
             끝까지 즐거워요. 챌린지 주제에 맞춰
             <br />
             일상을 인증하면 챌린지 리워드를 제공해요.
-          </p>
+          </motion.p>
         </div>
 
         <div className="flex flex-1 flex-col items-center">
@@ -79,8 +91,7 @@ export default function ChallengeSection() {
                   alt="500P 포인트"
                   className="pointer-events-none absolute -right-8 top-[35%] z-10 w-[120px] md:-right-10 md:w-[140px]"
                   style={{
-                    filter:
-                      "drop-shadow(0 10px 25px rgba(230,71,148,0.35))",
+                    filter: "drop-shadow(0 10px 25px rgba(230,71,148,0.35))",
                   }}
                   initial={{ opacity: 0, y: 40, rotate: -12 }}
                   animate={{
