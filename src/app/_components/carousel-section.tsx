@@ -33,7 +33,7 @@ const SLIDES: Slide[] = [
     id: 0,
     type: "feature",
     title: "FEED",
-    description: "나만의 취향으로 피드를 채우고",
+    description: "나만의 취향으로\n피드를 채우고",
     imgUrl:
       "https://framerusercontent.com/images/FojPtLIgqdUHXyw2ce5xTNOx46s.png?width=2000&height=1333",
   },
@@ -43,7 +43,7 @@ const SLIDES: Slide[] = [
     imgUrl:
       "https://framerusercontent.com/assets/5YbfQxciL1k8vnfwiQrySK3X0.mp4",
     title: "CHALLENGE",
-    description: "함께 도전하며 성취감을 얻고",
+    description: "함께 도전하며\n성취감을 얻고",
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ const SLIDES: Slide[] = [
     imgUrl:
       "https://framerusercontent.com/images/mF1AANHUNoWCxdGrsYWBgeTOiw.png?width=626&height=418",
     title: "SHOPPING",
-    description: "챌린지 리워드로 구매하는 쇼핑까지",
+    description: "챌린지 리워드로\n구매하는 쇼핑까지",
   },
   {
     id: 3,
@@ -77,9 +77,7 @@ function MobileSlideCard({
   description: string;
 }) {
   return (
-    <div
-      className={`relative overflow-hidden rounded-4xl bg-gray-200 ${className ?? ""}`}
-    >
+    <div className={`relative overflow-hidden bg-gray-200 ${className ?? ""}`}>
       {isVideo(imgUrl) ? (
         <video
           className="absolute inset-0 h-full w-full object-cover"
@@ -95,14 +93,13 @@ function MobileSlideCard({
           style={{ backgroundImage: `url(${imgUrl})` }}
         />
       )}
-      <div className="absolute inset-0 bg-black/60">
-        <p className="text-center text-white text-[40px] pt-10 font-black">
-          {title}
-        </p>
-        <p className="absolute bottom-12 left-0 right-0 px-6 text-white text-[32px] font-bold text-center leading-snug break-keep">
-          {description}
-        </p>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+      <span className="absolute top-0 left-0 bg-[#31D7CD] px-4 py-2 text-lg font-black text-white">
+        {title}.
+      </span>
+      <p className="absolute bottom-10 left-0 right-0 whitespace-pre-line px-6 text-center text-[32px] font-bold leading-[140%] text-white">
+        {description}
+      </p>
     </div>
   );
 }
@@ -120,7 +117,7 @@ function SummarySlideCard({
 }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-4xl bg-gray-200 ${className ?? ""}`}
+      className={`relative overflow-hidden rounded-3xl bg-gray-200 ${className ?? ""}`}
     >
       {isVideo(imgUrl) ? (
         <video
@@ -137,10 +134,11 @@ function SummarySlideCard({
           style={{ backgroundImage: `url(${imgUrl})` }}
         />
       )}
-      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-        <p className="px-6 text-white text-[36px] font-bold text-center leading-snug break-keep whitespace-pre-line">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <p className="whitespace-pre-line px-6 text-center text-[32px] font-bold leading-[140%] text-white">
           {description}
-          <span className="text-[#4DD9B4]">{highlightText}</span>
+          <span className="text-[#31D7CD]">{highlightText}</span>
         </p>
       </div>
     </div>
@@ -160,12 +158,12 @@ function DotIndicators() {
   }, [api]);
 
   return (
-    <div className="mx-auto mt-4 flex w-fit items-center gap-2 rounded-full bg-gray-200 px-3 py-2">
+    <div className="mx-auto flex w-fit items-center gap-2 rounded-full bg-white/20 px-3 py-2">
       {Array.from({ length: count }).map((_, i) => (
         <button
           key={i}
           className={`h-1.5 w-1.5 rounded-full transition-colors ${
-            i === selected ? "bg-white" : "bg-gray-300"
+            i === selected ? "bg-white opacity-100" : "bg-white opacity-50"
           }`}
           onClick={() => api?.scrollTo(i)}
         />
@@ -178,28 +176,34 @@ function MobileCarousel() {
   return (
     <div className="md:hidden">
       <Carousel opts={{ align: "center", containScroll: false }}>
-        <CarouselContent className="-ml-4">
-          {SLIDES.map((slide) => (
-            <CarouselItem key={slide.id} className="basis-[85%] pl-4">
-              {slide.type === "summary" ? (
-                <SummarySlideCard
-                  imgUrl={slide.imgUrl}
-                  className="aspect-[3/5]"
-                  description={slide.description}
-                  highlightText={slide.highlightText}
-                />
-              ) : (
-                <MobileSlideCard
-                  imgUrl={slide.imgUrl}
-                  className="aspect-[3/5]"
-                  title={slide.title}
-                  description={slide.description}
-                />
-              )}
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <DotIndicators />
+        <div className="relative">
+          <CarouselContent className="-ml-4">
+            {SLIDES.map((slide) => (
+              <CarouselItem key={slide.id} className="basis-[85%] pl-4">
+                {slide.type === "summary" ? (
+                  <SummarySlideCard
+                    imgUrl={slide.imgUrl}
+                    className="aspect-[3/5]"
+                    description={slide.description}
+                    highlightText={slide.highlightText}
+                  />
+                ) : (
+                  <MobileSlideCard
+                    imgUrl={slide.imgUrl}
+                    className="aspect-[3/5]"
+                    title={slide.title}
+                    description={slide.description}
+                  />
+                )}
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="pointer-events-none absolute bottom-[14px] left-0 right-0 z-10 flex justify-center">
+            <div className="pointer-events-auto">
+              <DotIndicators />
+            </div>
+          </div>
+        </div>
       </Carousel>
     </div>
   );
@@ -233,11 +237,11 @@ function DesktopFeatureCard({
           style={{ backgroundImage: `url(${imgUrl})` }}
         />
       )}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/55" />
       <span className="absolute top-0 left-0 bg-[#4DD9B4] px-5 py-3 text-xl font-black text-white">
         {title}.
       </span>
-      <p className="absolute bottom-[25%] left-0 right-0 mx-auto max-w-[360px] text-white text-[40px] font-bold text-center leading-snug break-keep">
+      <p className="absolute bottom-[25%] left-0 right-0 mx-auto max-w-[360px] whitespace-pre-line text-white text-[40px] font-bold text-center leading-snug break-keep">
         {description}
       </p>
     </div>
@@ -272,10 +276,10 @@ function DesktopSummaryCard({
           style={{ backgroundImage: `url(${imgUrl})` }}
         />
       )}
-      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-        <p className="max-w-[360px] text-white text-[40px] font-bold text-center leading-snug break-keep whitespace-pre-line">
+      <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+        <p className="max-w-[360px] whitespace-pre-line text-white text-[40px] font-bold text-center leading-snug break-keep">
           {description}
-          <span className="text-[#4DD9B4]">{highlightText}</span>
+          <span className="text-[#31D7CD]">{highlightText}</span>
         </p>
       </div>
     </div>
