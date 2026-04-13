@@ -97,7 +97,7 @@ function MobileSlideCard({
       <span className="absolute top-0 left-0 bg-[#31D7CD] px-4 py-2 text-[16px] font-semibold text-white">
         {title}.
       </span>
-      <p className="absolute bottom-20 left-0 right-0 whitespace-pre-line px-6 text-center text-[40px] font-bold leading-[140%] text-white">
+      <p className="absolute bottom-20 left-0 right-0 whitespace-pre-line px-6 text-center text-[35px] font-bold leading-[140%] text-white">
         {description}
       </p>
     </div>
@@ -134,7 +134,7 @@ function SummarySlideCard({
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
       <div className="absolute inset-0 flex items-center justify-center">
-        <p className="whitespace-pre-line px-6 text-center text-[32px] font-bold leading-[140%] text-white">
+        <p className="whitespace-pre-line px-6 text-center text-[35px] font-bold leading-[140%] text-white">
           {description}
           <span className="text-[#32d7cd]">{highlightText}</span>
         </p>
@@ -239,7 +239,7 @@ function DesktopFeatureCard({
       <span className="absolute top-0 left-0 bg-[#32d7cd] px-5 py-3 text-[16px] font-semibold text-white">
         {title}.
       </span>
-      <p className="absolute bottom-[25%] left-0 right-0 mx-auto max-w-[360px] whitespace-pre-line text-white text-[40px] font-bold text-center leading-snug break-keep">
+      <p className="absolute bottom-[25%] left-0 right-0 mx-auto max-w-[450px] whitespace-pre-line text-white text-[40px] md:text-[60px] font-bold text-center leading-snug break-keep">
         {description}
       </p>
     </div>
@@ -275,7 +275,7 @@ function DesktopSummaryCard({
         />
       )}
       <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-        <p className="max-w-[360px] whitespace-pre-line text-white text-[40px] font-bold text-center leading-snug break-keep">
+        <p className="max-w-[450px] whitespace-pre-line text-white text-[40px] md:text-[60px] font-bold text-center leading-snug break-keep">
           {description}
           <span className="text-[#31D7CD]">{highlightText}</span>
         </p>

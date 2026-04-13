@@ -191,19 +191,17 @@ function BentoGrid({ keyPrefix = "" }: { keyPrefix?: string }) {
 }
 
 export default function CtaSection() {
-  const isMobile = useIsMobile();
-
-  const handleDownload = useCallback(() => {
-    const ua = navigator.userAgent;
-    const isIOS = /iPhone|iPad|iPod/i.test(ua);
-    window.open(isIOS ? APPSTORE_URL : PLAYSTORE_URL, "_blank");
-  }, []);
-
   return (
     <div className="pt-[100px] md:pt-[120px] pb-[40px] md:pb-[60px]">
-      <p className="text-[40px] font-bold text-center">기록할수록</p>
-      <p className="text-[40px] font-bold text-center">가치가 쌓이는</p>
-      <p className="text-[40px] font-bold text-center pb-8">웰니스 커뮤니티</p>
+      <p className="text-[40px] md:text-[60px] font-bold text-center">
+        기록할수록
+      </p>
+      <p className="text-[40px] md:text-[60px] font-bold text-center">
+        가치가 쌓이는
+      </p>
+      <p className="text-[40px] md:text-[60px] font-bold text-center pb-8">
+        웰니스 커뮤니티
+      </p>
       <Image
         src="/logo.svg"
         alt="logo"

@@ -70,7 +70,7 @@ const imageConfigs: ImageConfig[] = [
     id: 0,
     desktopClass: "top-[-20px] left-[-20px] w-[190px] h-[245px]",
     mobileClass: "top-[-10px] left-[-15px] w-[120px] h-[155px]",
-    rotate: -4,
+    rotate: 0,
     floatY: -10,
     delay: 0,
     duration: 4,
@@ -79,7 +79,7 @@ const imageConfigs: ImageConfig[] = [
     id: 2,
     desktopClass: "top-[30px] left-[280px] w-[100px] h-[125px]",
     mobileClass: "top-[5px] left-[140px] w-[100px] h-[130px]",
-    rotate: 3,
+    rotate: 0,
     floatY: -14,
     delay: 0.6,
     duration: 4.5,
@@ -88,7 +88,7 @@ const imageConfigs: ImageConfig[] = [
     id: 1,
     desktopClass: "top-[-15px] left-[600px] w-[165px] h-[185px]",
     mobileClass: "hidden",
-    rotate: -2,
+    rotate: 0,
     floatY: -8,
     delay: 1.0,
     duration: 4.2,
@@ -97,7 +97,7 @@ const imageConfigs: ImageConfig[] = [
     id: 5,
     desktopClass: "top-[-20px] right-[-20px] w-[210px] h-[165px]",
     mobileClass: "top-[-10px] right-[-15px] w-[140px] h-[110px]",
-    rotate: 5,
+    rotate: 0,
     floatY: -8,
     delay: 1.2,
     duration: 3.8,
@@ -106,7 +106,7 @@ const imageConfigs: ImageConfig[] = [
     id: 3,
     desktopClass: "top-[290px] left-[80px] w-[105px] h-[145px]",
     mobileClass: "top-[240px] left-[-15px] w-[110px] h-[90px]",
-    rotate: -4,
+    rotate: 0,
     floatY: -12,
     delay: 0.3,
     duration: 4.2,
@@ -115,7 +115,7 @@ const imageConfigs: ImageConfig[] = [
     id: 4,
     desktopClass: "bottom-[-20px] left-[-20px] w-[195px] h-[280px]",
     mobileClass: "bottom-[-10px] left-[-15px] w-[140px] h-[200px]",
-    rotate: -3,
+    rotate: 0,
     floatY: -10,
     delay: 0.9,
     duration: 4.4,
@@ -124,7 +124,7 @@ const imageConfigs: ImageConfig[] = [
     id: 7,
     desktopClass: "bottom-[-15px] left-[360px] w-[185px] h-[145px]",
     mobileClass: "bottom-[-10px] left-[40%] w-[140px] h-[110px]",
-    rotate: 2,
+    rotate: 0,
     floatY: -14,
     delay: 1.5,
     duration: 3.6,
@@ -133,7 +133,7 @@ const imageConfigs: ImageConfig[] = [
     id: 9,
     desktopClass: "top-[580px] right-[180px] w-[175px] h-[130px]",
     mobileClass: "top-[150px] right-[-10px] w-[130px] h-[95px]",
-    rotate: 3,
+    rotate: 0,
     floatY: -10,
     delay: 0.5,
     duration: 4.0,
@@ -142,7 +142,7 @@ const imageConfigs: ImageConfig[] = [
     id: 6,
     desktopClass: "top-[280px] right-[-20px] w-[170px] h-[235px]",
     mobileClass: "top-[310px] right-[-80px] w-[120px] h-[165px]",
-    rotate: -3,
+    rotate: 0,
     floatY: -10,
     delay: 0.8,
     duration: 4.1,
@@ -151,7 +151,7 @@ const imageConfigs: ImageConfig[] = [
     id: 8,
     desktopClass: "bottom-[-15px] right-[-20px] w-[155px] h-[215px]",
     mobileClass: "bottom-[-10px] right-[-10px] w-[110px] h-[155px]",
-    rotate: 5,
+    rotate: 0,
     floatY: -12,
     delay: 1.3,
     duration: 3.7,
@@ -221,7 +221,7 @@ function FloatingImage({
 
 export default function FeedSection() {
   return (
-    <section className="mt-30 relative mx-auto max-w-screen-xl h-[800px] overflow-hidden rounded-3xl bg-[#E8FAF2]">
+    <section className="mt-30 relative mx-auto max-w-screen-xl h-[786px] overflow-hidden rounded-3xl bg-[#E8FAF2]">
       <div className="relative h-full">
         {imageConfigs.map((config) => {
           const img = imageList.find((i) => i.id === config.id)!;
@@ -244,7 +244,7 @@ export default function FeedSection() {
             <p className="text-[16px] font-semibold tracking-wide text-[#4DD9B4] decoration-2">
               FEED.
             </p>
-            <h2 className="mt-5 text-[40px] font-bold leading-snug break-keep">
+            <h2 className="mt-5 text-[40px] md:text-[60px] font-bold leading-snug break-keep">
               자유롭게 <br /> 영감을 나누는
               <br />
               웰니스 피드

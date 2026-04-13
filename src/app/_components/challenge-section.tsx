@@ -22,7 +22,7 @@ export default function ChallengeSection() {
             CHALLENGE.
           </p>
           <motion.p
-            className="text-[40px] font-bold leading-tight"
+            className="text-[40px] md:text-[60px] font-bold leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -31,7 +31,7 @@ export default function ChallengeSection() {
             함께하는 도전
           </motion.p>
           <motion.p
-            className="text-[40px] font-bold leading-tight"
+            className="text-[40px] md:text-[60px] font-bold leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -40,7 +40,7 @@ export default function ChallengeSection() {
             선물처럼
           </motion.p>
           <motion.p
-            className="text-[40px] font-bold leading-tight"
+            className="text-[40px] md:text-[60px] font-bold leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -69,12 +69,12 @@ export default function ChallengeSection() {
             onValueChange={setActiveTab}
             className="flex w-full flex-col items-center"
           >
-            <TabsList className="h-auto w-full max-w-[300px] gap-2 bg-transparent p-0">
+            <TabsList className="h-auto w-full max-w-[220px] md:max-w-[300px] gap-2 bg-transparent p-0">
               {tabItems.map((tab) => (
                 <TabsTrigger
                   key={tab.value}
                   value={tab.value}
-                  className="cursor-pointer flex-1 rounded-[4px] border-none bg-[#FFFAFC] px-6 py-3 h-12 text-lg font-medium text-[#C297AB] shadow-none hover:text-[#C297AB] data-active:bg-[#E64794] data-active:font-bold data-active:text-white data-active:hover:text-white"
+                  className="cursor-pointer flex-1 rounded-[4px] border-none bg-[#FFFAFC] px-3 py-2 h-9 text-[15px] font-medium text-[#C297AB] shadow-none hover:text-[#C297AB] data-active:bg-[#E64794] data-active:font-bold data-active:text-white data-active:hover:text-white"
                 >
                   {tab.label}
                 </TabsTrigger>
@@ -82,7 +82,7 @@ export default function ChallengeSection() {
             </TabsList>
           </Tabs>
 
-          <div className="relative mt-8 w-[220px] md:w-[300px]">
+          <div className="relative mt-4 md:mt-8 w-[220px] md:w-[300px]">
             <AnimatePresence mode="wait">
               <motion.img
                 key={current.value}

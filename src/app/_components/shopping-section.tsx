@@ -89,7 +89,7 @@ export default function ShoppingSection() {
           SHOPPING.
         </p>
         <motion.p
-          className="text-right text-[40px] font-bold leading-[1.3] text-[#1F1F1F]"
+          className="text-right text-[40px] md:text-[60px] font-bold leading-[1.3] text-[#1F1F1F]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -98,7 +98,7 @@ export default function ShoppingSection() {
           나의 노력으로
         </motion.p>
         <motion.p
-          className="text-right text-[40px] font-bold leading-[1.3] text-[#1F1F1F]"
+          className="text-right text-[40px] md:text-[60px] font-bold leading-[1.3] text-[#1F1F1F]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -107,7 +107,7 @@ export default function ShoppingSection() {
           완성하는
         </motion.p>
         <motion.p
-          className="mb-6 text-right text-[40px] font-bold leading-[1.3] text-[#1F1F1F]"
+          className="mb-6 text-right text-[40px] md:text-[60px] font-bold leading-[1.3] text-[#1F1F1F]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
