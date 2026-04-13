@@ -92,22 +92,10 @@ export default function FooterSection() {
             style={{ color: TEAL }}
           >
             <p>070-4243-0820</p>
-            <p>평일: 10:00 ~18:00 (점심시간: 13:00 ~14:15)</p>
+            <p>평일: 10:00 ~18:00 (점심시간: 13:00 ~ 14:15)</p>
             <p>주말 및 공휴일 휴무</p>
           </div>
           <div className="flex items-center gap-3">
-            <a
-              href="http://pf.kakao.com/_xdYAYxj"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-full border px-3 py-1.5"
-              style={{ borderColor: TEAL }}
-            >
-              <KakaoIcon />
-              <span className="text-[13px] font-bold" style={{ color: TEAL }}>
-                카톡상담
-              </span>
-            </a>
             <a
               href="https://www.instagram.com/cocobab_official?igsh=MWN0cnpkeGhxaWE0Mw=="
               target="_blank"

@@ -95,31 +95,6 @@ export default function ChallengeSection() {
                 transition={{ duration: 0.4, ease: "easeOut" }}
               />
             </AnimatePresence>
-
-            <AnimatePresence>
-              {activeTab === "reward" && (
-                <motion.img
-                  src="/images/challenge_4.avif"
-                  alt="500P 포인트"
-                  className="pointer-events-none absolute -right-8 top-[35%] z-10 w-[120px] md:-right-10 md:w-[140px]"
-                  initial={{ opacity: 0, y: 40, rotate: -12 }}
-                  animate={{
-                    opacity: 1,
-                    y: [0, -12, 0],
-                    rotate: -12,
-                    transition: {
-                      opacity: { duration: 0.5, ease: "easeOut" },
-                      y: {
-                        duration: 2.5,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      },
-                    },
-                  }}
-                  exit={{ opacity: 0, y: 40, transition: { duration: 0.2 } }}
-                />
-              )}
-            </AnimatePresence>
           </div>
         </div>
       </div>
