@@ -8,7 +8,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % TEXT_DATA.length);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
