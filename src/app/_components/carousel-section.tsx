@@ -34,30 +34,26 @@ const SLIDES: Slide[] = [
     type: "feature",
     title: "FEED",
     description: "나만의 취향으로\n피드를 채우고",
-    imgUrl:
-      "https://framerusercontent.com/images/FojPtLIgqdUHXyw2ce5xTNOx46s.png?width=2000&height=1333",
+    imgUrl: "/images/asset-26.jpg",
   },
   {
     id: 1,
     type: "feature",
-    imgUrl:
-      "https://framerusercontent.com/assets/5YbfQxciL1k8vnfwiQrySK3X0.mp4",
+    imgUrl: "/images/asset-13.png",
     title: "CHALLENGE",
     description: "함께 도전하며\n성취감을 얻고",
   },
   {
     id: 2,
     type: "feature",
-    imgUrl:
-      "https://framerusercontent.com/images/mF1AANHUNoWCxdGrsYWBgeTOiw.png?width=626&height=418",
+    imgUrl: "/images/asset-2.png",
     title: "SHOPPING",
     description: "챌린지 리워드로\n구매하는 쇼핑까지",
   },
   {
     id: 3,
     type: "summary",
-    imgUrl:
-      "https://framerusercontent.com/images/3kYcVoFVSKUmX7toeew4QZabEn4.png?width=2000&height=1333",
+    imgUrl: "/images/asset-5.png",
     description: "나의 일상이\n가치가 되는 ",
     highlightText: "마이피",
   },

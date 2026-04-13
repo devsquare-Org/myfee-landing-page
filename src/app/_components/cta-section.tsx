@@ -1,12 +1,5 @@
 "use client";
-
-import { useCallback } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
-
-const APPSTORE_URL = "https://apps.apple.com/app/myfee/id6742517498";
-const PLAYSTORE_URL =
-  "https://play.google.com/store/apps/details?id=com.myfee.app";
 
 const GRID_W = 3170;
 const GRID_H = 360;
@@ -25,7 +18,7 @@ type GridItem = {
 
 const gridItems: GridItem[] = [
   {
-    src: "https://framerusercontent.com/images/mXNyVCxoQ7ye13u2i6uCLlGXkgo.png?scale-down-to=1024&width=1480&height=986",
+    src: "/images/asset-4.png",
     type: "image",
     top: 0,
     left: 0,
@@ -34,8 +27,8 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/assets/hDj6vjL0cMOQqMPJypgevsd6SU.mp4",
-    type: "video",
+    src: "/images/asset-21.jpg",
+    type: "image",
     top: 190,
     left: 190,
     w: 400,
@@ -43,7 +36,7 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/images/LTGOGXg0zIwsQ37c0NmyyC7l36M.png?scale-down-to=1024&width=1333&height=2000",
+    src: "/images/asset-23.jpg",
     type: "image",
     top: 0,
     left: 420,
@@ -53,7 +46,7 @@ const gridItems: GridItem[] = [
     objectPosition: "center bottom",
   },
   {
-    src: "https://framerusercontent.com/images/baJdObHdl41JUTbesF3D4RrNc.png?scale-down-to=1024&width=1333&height=2000",
+    src: "/images/asset-25.jpg",
     type: "image",
     top: 0,
     left: 610,
@@ -62,7 +55,7 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/images/3VWvud3XcY2dmltr3Beo5yVt2Ww.png?scale-down-to=1024&width=1334&height=2000",
+    src: "/images/asset-20.jpg",
     type: "image",
     top: 0,
     left: 810,
@@ -71,7 +64,7 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/images/RWLG27u831P829c6y5ENiVHxcY.png?scale-down-to=1024&width=2000&height=1334",
+    src: "/images/asset-33.jpg",
     type: "image",
     top: 0,
     left: 1110,
@@ -80,7 +73,7 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/images/qgUU7m5aptjTt15O7ZNbeeQeqI.png?scale-down-to=1024&width=1333&height=2000",
+    src: "/images/asset-27.jpg",
     type: "image",
     top: 0,
     left: 1370,
@@ -89,8 +82,8 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/assets/3WsDiyx7nipv4gd2MBDAt8dEp4.mp4",
-    type: "video",
+    src: "/images/asset-3.png",
+    type: "image",
     top: 190,
     left: 1370,
     w: 170,
@@ -98,8 +91,8 @@ const gridItems: GridItem[] = [
     radius: 999,
   },
   {
-    src: "https://framerusercontent.com/assets/DTYPOEBOJaPQ7FdTP6XEOxyBtLI.mp4",
-    type: "video",
+    src: "/images/asset-29.jpg",
+    type: "image",
     top: 0,
     left: 1560,
     w: 360,
@@ -107,7 +100,7 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/images/3nH2QFquP86gwW2E0WR6NRnU0.png?scale-down-to=1024&width=2000&height=1335",
+    src: "/images/asset-32.jpg",
     type: "image",
     top: 190,
     left: 1940,
@@ -116,7 +109,7 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/images/MSsRPAHWXEaMNyP7hY2lUuJMD5w.png?scale-down-to=1024&width=2000&height=1333",
+    src: "/images/asset-18.jpg",
     type: "image",
     top: 0,
     left: 2130,
@@ -125,7 +118,7 @@ const gridItems: GridItem[] = [
     radius: 25,
   },
   {
-    src: "https://framerusercontent.com/images/xBndNn3qTJZB8GYJmgGzY1qNV6E.png?scale-down-to=1024&width=1333&height=2000",
+    src: "/images/asset-1.png",
     type: "image",
     top: 0,
     left: 2430,
@@ -135,7 +128,7 @@ const gridItems: GridItem[] = [
     objectPosition: "50.5% 66.9%",
   },
   {
-    src: "https://framerusercontent.com/assets/bLJ44FwEVP6F8ogwTjSngkbpOA.mp4",
+    src: "https://framerusercontent.com/assets/DTYPOEBOJaPQ7FdTP6XEOxyBtLI.mp4",
     type: "video",
     top: 157,
     left: 2810,

@@ -5,43 +5,35 @@ import { motion } from "framer-motion";
 const imageList = [
   {
     id: 0,
-    imgUrl:
-      "https://framerusercontent.com/assets/1DyrvgD24BQFiOJ7HufoQshqFg0.mp4",
+    imgUrl: "/images/asset-16.png",
   },
   {
     id: 1,
-    imgUrl:
-      "https://framerusercontent.com/images/fr8TGTN0yRT1ZrSUmLmILzfCiI.png?width=2000&height=2000",
+    imgUrl: "/images/asset-19.jpg",
   },
   {
     id: 2,
-    imgUrl:
-      "https://framerusercontent.com/images/hD9SSFv9l1MfZLKXmA3dGvvzk2o.png?width=1333&height=2000",
+    imgUrl: "/images/asset-11.png",
   },
   {
     id: 3,
-    imgUrl:
-      "https://framerusercontent.com/images/K7b0raC14YwIpVBRMpzAgOzjU.png?width=1480&height=986",
+    imgUrl: "/images/asset-10.png",
   },
   {
     id: 4,
-    imgUrl:
-      "https://framerusercontent.com/images/0BQTYBYIVPUdpuuyasn8YdHHc.png?width=1333&height=2000",
+    imgUrl: "/images/asset-6.png",
   },
   {
     id: 5,
-    imgUrl:
-      "https://framerusercontent.com/images/SbKYhRq6FwarrPtuJqMMq0pldO0.png?width=1335&height=2000",
+    imgUrl: "/images/asset-14.png",
   },
   {
     id: 6,
-    imgUrl:
-      "https://framerusercontent.com/images/TxaeNlkLZePb7ZlcxRMZGcidws.png?width=1333&height=2000",
+    imgUrl: "/images/asset-15.png",
   },
   {
     id: 7,
-    imgUrl:
-      "https://framerusercontent.com/images/wlQyNYsX7wJh83KYmgXRNoWJkq0.png?width=2000&height=1124",
+    imgUrl: "/images/asset-35.jpeg",
   },
 ];
 
