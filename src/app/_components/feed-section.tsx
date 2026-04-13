@@ -132,7 +132,7 @@ const imageConfigs: ImageConfig[] = [
   {
     id: 9,
     desktopClass: "top-[580px] right-[180px] w-[175px] h-[130px]",
-    mobileClass: "top-[160px] right-[50px] w-[130px] h-[95px]",
+    mobileClass: "top-[150px] right-[-10px] w-[130px] h-[95px]",
     rotate: 3,
     floatY: -10,
     delay: 0.5,
@@ -221,7 +221,7 @@ function FloatingImage({
 
 export default function FeedSection() {
   return (
-    <section className="mt-30 relative mx-auto max-w-[1152px] h-[800px] overflow-hidden rounded-3xl bg-[#E8FAF2]">
+    <section className="mt-30 relative mx-auto max-w-screen-xl h-[800px] overflow-hidden rounded-3xl bg-[#E8FAF2]">
       <div className="relative h-full">
         {imageConfigs.map((config) => {
           const img = imageList.find((i) => i.id === config.id)!;
@@ -241,19 +241,19 @@ export default function FeedSection() {
 
         <div className="absolute inset-0 z-10 flex items-center justify-center">
           <div className="mx-auto max-w-xl px-6 text-center">
-            <p className="text-[40px] font-extrabold tracking-wide text-[#4DD9B4] decoration-2">
-              FEED
+            <p className="text-[16px] font-semibold tracking-wide text-[#4DD9B4] decoration-2">
+              FEED.
             </p>
-            <h2 className="mt-5 text-[28px] font-bold leading-snug break-keep md:text-[48px]">
-              자유롭게 영감을 나누는
+            <h2 className="mt-5 text-[40px] font-bold leading-snug break-keep">
+              자유롭게 <br /> 영감을 나누는
               <br />
               웰니스 피드
             </h2>
-            <p className="mt-6 text-sm leading-relaxed text-gray-500 break-keep md:text-base">
+            <p className="mt-6 text-[15px] leading-relaxed text-black/90 break-keep md:text-base">
               꼭 특별한 날이 아니어도 좋아요.
               <br />
-              오늘의 식단부터 나만의 뷰티 팁까지, 건강한 일상을
-              <br className="hidden md:inline" /> 감각적인 피드로 기록해요.
+              오늘의 식단부터 나만의 뷰티 팁까지,
+              <br /> 건강한 일상을 감각적인 피드로 기록해요.
             </p>
           </div>
         </div>

@@ -49,7 +49,7 @@ export default function ShoppingSection() {
   const doubled = [...imageList, ...imageList];
 
   return (
-    <section className="relative rounded-3xl overflow-hidden bg-[#EEFBFA] py-6 md:py-10 mt-20 max-w-[1152px] mx-auto">
+    <section className="relative rounded-3xl overflow-hidden bg-[#EEFBFA] py-6 md:py-10 mt-20 max-w-screen-xl mx-auto">
       <img
         src="/images/shop_line.png"
         alt=""
@@ -84,12 +84,12 @@ export default function ShoppingSection() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto mt-14 max-w-[1152px] px-8 md:mt-20 md:px-14">
-        <p className="text-right text-lg font-semibold text-[#31D7CD] md:text-[28px]">
+      <div className="relative z-10 mx-auto mt-14 max-w-screen-xl px-8 md:mt-20 md:px-14">
+        <p className="text-right text-[16px] font-semibold text-[#31D7CD]">
           SHOPPING.
         </p>
         <motion.p
-          className="text-right text-[28px] font-bold leading-[1.3] text-[#1F1F1F] md:text-[48px]"
+          className="text-right text-[40px] font-bold leading-[1.3] text-[#1F1F1F]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -98,7 +98,7 @@ export default function ShoppingSection() {
           나의 노력으로
         </motion.p>
         <motion.p
-          className="text-right text-[28px] font-bold leading-[1.3] text-[#1F1F1F] md:text-[48px]"
+          className="text-right text-[40px] font-bold leading-[1.3] text-[#1F1F1F]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -107,7 +107,7 @@ export default function ShoppingSection() {
           완성하는
         </motion.p>
         <motion.p
-          className="mb-6 text-right text-[28px] font-bold leading-[1.3] text-[#1F1F1F] md:text-[48px]"
+          className="mb-6 text-right text-[40px] font-bold leading-[1.3] text-[#1F1F1F]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

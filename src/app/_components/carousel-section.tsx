@@ -94,10 +94,10 @@ function MobileSlideCard({
         />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
-      <span className="absolute top-0 left-0 bg-[#31D7CD] px-4 py-2 text-lg font-black text-white">
+      <span className="absolute top-0 left-0 bg-[#31D7CD] px-4 py-2 text-[16px] font-semibold text-white">
         {title}.
       </span>
-      <p className="absolute bottom-10 left-0 right-0 whitespace-pre-line px-6 text-center text-[32px] font-bold leading-[140%] text-white">
+      <p className="absolute bottom-20 left-0 right-0 whitespace-pre-line px-6 text-center text-[40px] font-bold leading-[140%] text-white">
         {description}
       </p>
     </div>
@@ -116,9 +116,7 @@ function SummarySlideCard({
   highlightText: string;
 }) {
   return (
-    <div
-      className={`relative overflow-hidden rounded-3xl bg-gray-200 ${className ?? ""}`}
-    >
+    <div className={`relative overflow-hidden bg-gray-200 ${className ?? ""}`}>
       {isVideo(imgUrl) ? (
         <video
           className="absolute inset-0 h-full w-full object-cover"
@@ -138,7 +136,7 @@ function SummarySlideCard({
       <div className="absolute inset-0 flex items-center justify-center">
         <p className="whitespace-pre-line px-6 text-center text-[32px] font-bold leading-[140%] text-white">
           {description}
-          <span className="text-[#31D7CD]">{highlightText}</span>
+          <span className="text-[#32d7cd]">{highlightText}</span>
         </p>
       </div>
     </div>
@@ -238,7 +236,7 @@ function DesktopFeatureCard({
         />
       )}
       <div className="absolute inset-0 bg-black/55" />
-      <span className="absolute top-0 left-0 bg-[#4DD9B4] px-5 py-3 text-xl font-black text-white">
+      <span className="absolute top-0 left-0 bg-[#32d7cd] px-5 py-3 text-[16px] font-semibold text-white">
         {title}.
       </span>
       <p className="absolute bottom-[25%] left-0 right-0 mx-auto max-w-[360px] whitespace-pre-line text-white text-[40px] font-bold text-center leading-snug break-keep">
@@ -314,8 +312,8 @@ function DesktopCarousel() {
           </CarouselContent>
           <div className="pointer-events-none absolute inset-0 flex items-end justify-center pb-[3%]">
             <div className="pointer-events-auto flex items-center gap-3">
-              <CarouselPrevious className="static translate-y-0 h-12 w-12 bg-white/80 hover:bg-white border-0 cursor-pointer" />
-              <CarouselNext className="static translate-y-0 h-12 w-12 bg-white/80 hover:bg-white border-0 cursor-pointer" />
+              <CarouselPrevious className="static translate-y-0 h-8 w-8 bg-white/80 hover:bg-white border-0 cursor-pointer" />
+              <CarouselNext className="static translate-y-0 h-8 w-8 bg-white/80 hover:bg-white border-0 cursor-pointer" />
             </div>
           </div>
         </div>

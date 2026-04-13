@@ -4,8 +4,7 @@ import { useCallback } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
 
-const APPSTORE_URL =
-  "https://apps.apple.com/app/myfee/id6742517498";
+const APPSTORE_URL = "https://apps.apple.com/app/myfee/id6742517498";
 const PLAYSTORE_URL =
   "https://play.google.com/store/apps/details?id=com.myfee.app";
 
@@ -202,12 +201,9 @@ export default function CtaSection() {
 
   return (
     <div className="pt-[100px] md:pt-[120px] pb-[40px] md:pb-[60px]">
-      <p className="text-[28px] font-bold md:text-[48px] text-center">
-        기록할 수록 가치가
-      </p>
-      <p className="text-[28px] font-bold md:text-[48px] text-center pb-8">
-        쌓이는 웰니스 커뮤니티
-      </p>
+      <p className="text-[40px] font-bold text-center">기록할수록</p>
+      <p className="text-[40px] font-bold text-center">가치가 쌓이는</p>
+      <p className="text-[40px] font-bold text-center pb-8">웰니스 커뮤니티</p>
       <Image
         src="/logo.svg"
         alt="logo"
@@ -215,15 +211,6 @@ export default function CtaSection() {
         height={60}
         className="mx-auto"
       />
-      {isMobile && (
-        <button
-          type="button"
-          onClick={handleDownload}
-          className="bg-[#31d7cd] text-white px-5 py-3 rounded-full font-bold mx-auto block mt-8"
-        >
-          지금 다운로드
-        </button>
-      )}
 
       <div className="mt-12 w-full overflow-hidden">
         <div

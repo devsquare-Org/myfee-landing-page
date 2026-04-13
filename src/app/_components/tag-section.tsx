@@ -13,7 +13,7 @@ export default function TagSection() {
   return (
     <div className="relative bg-linear-to-b from-white via-[#BEFBF7] to-white px-6 py-20 md:px-16 md:py-40">
       <motion.p
-        className="text-center text-[16px] md:text-left md:text-base pb-20 md:pb-40"
+        className="text-center text-[16px] md:text-left md:text-[21px] pb-20 md:pb-40"
         {...fadeSlideUp}
       >
         기록은 하고 싶고,
@@ -21,7 +21,7 @@ export default function TagSection() {
       </motion.p>
 
       <motion.div
-        className="text-center text-[40px] md:text-[48px] font-bold pb-20 md:pb-40"
+        className="text-center text-[40px] md:text-[60px] font-bold pb-20 md:pb-40"
         {...fadeSlideUp}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       >
@@ -33,7 +33,7 @@ export default function TagSection() {
       </motion.div>
 
       <motion.p
-        className="text-center text-[16px] md:text-right md:text-base"
+        className="text-center text-[16px] md:text-right md:text-[21px]"
         {...fadeSlideUp}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
       >

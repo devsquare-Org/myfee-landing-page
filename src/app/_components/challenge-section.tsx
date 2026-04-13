@@ -5,9 +5,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const tabItems = [
-  { value: "challenge", label: "도전", src: "/images/challenge_1.avif" },
-  { value: "record", label: "기록", src: "/images/challenge_2.avif" },
-  { value: "reward", label: "보상", src: "/images/challenge_3.avif" },
+  { value: "challenge", label: "도전", src: "/images/chall.png" },
+  { value: "record", label: "기록", src: "/images/feed.png" },
+  { value: "reward", label: "보상", src: "/images/shopping.png" },
 ];
 
 export default function ChallengeSection() {
@@ -15,21 +15,23 @@ export default function ChallengeSection() {
   const current = tabItems.find((t) => t.value === activeTab)!;
 
   return (
-    <section className="relative mx-auto mt-20 max-w-[1152px] rounded-3xl bg-[#FCF2F8] md:mt-30">
-      <div className="flex flex-col gap-10 p-8 md:flex-row md:p-14">
+    <section className="relative mx-auto mt-20 max-w-screen-xl rounded-3xl bg-[#FCF2F8] md:mt-30">
+      <div className="flex flex-col gap-10 p-8 md:flex-row md:p-14 !pb-0">
         <div className="shrink-0 md:w-[42%]">
-          <p className="mb-3 text-lg font-bold text-[#E64794]">CHALLENGE.</p>
+          <p className="mb-3 text-[16px] font-semibold text-[#E64794]">
+            CHALLENGE.
+          </p>
           <motion.p
-            className="text-[28px] font-bold leading-tight md:text-[48px]"
+            className="text-[40px] font-bold leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            함께해서 즐거운 도전.
+            함께하는 도전
           </motion.p>
           <motion.p
-            className="text-[28px] font-bold leading-tight md:text-[48px]"
+            className="text-[40px] font-bold leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -38,7 +40,7 @@ export default function ChallengeSection() {
             선물처럼
           </motion.p>
           <motion.p
-            className="text-[28px] font-bold leading-tight md:text-[48px]"
+            className="text-[40px] font-bold leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -47,7 +49,7 @@ export default function ChallengeSection() {
             찾아오는 혜택
           </motion.p>
           <motion.p
-            className="mt-8 text-[15px] leading-relaxed text-gray-500 md:text-[17px]"
+            className="mt-8 text-[15px] leading-relaxed text-black/90 md:text-[17px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -67,7 +69,7 @@ export default function ChallengeSection() {
             onValueChange={setActiveTab}
             className="flex w-full flex-col items-center"
           >
-            <TabsList className="h-auto w-full gap-2 bg-transparent p-0">
+            <TabsList className="h-auto w-full max-w-[300px] gap-2 bg-transparent p-0">
               {tabItems.map((tab) => (
                 <TabsTrigger
                   key={tab.value}
@@ -80,13 +82,13 @@ export default function ChallengeSection() {
             </TabsList>
           </Tabs>
 
-          <div className="relative mt-8 aspect-[300/620] w-[260px] md:w-[300px]">
+          <div className="relative mt-8 w-[220px] md:w-[300px]">
             <AnimatePresence mode="wait">
               <motion.img
                 key={current.value}
                 src={current.src}
                 alt={current.label}
-                className="absolute left-0 top-0 w-full"
+                className="block h-auto w-full max-w-full"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, transition: { duration: 0 } }}

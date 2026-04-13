@@ -20,7 +20,7 @@ export default function HeroSection() {
         loop
         muted
         playsInline
-        // src="/hero-video.mp4"
+        src="/video/main-video.mp4"
       />
 
       <div className="absolute inset-0 bg-black/40" />
@@ -39,7 +39,7 @@ export default function HeroSection() {
             {words.map((word, i) => (
               <span
                 key={i}
-                className="block text-[60px] font-extrabold leading-[1.2] text-white"
+                className="block text-[60px] md:text-[80px] font-extrabold leading-[1.2] text-white"
               >
                 {word}
               </span>
