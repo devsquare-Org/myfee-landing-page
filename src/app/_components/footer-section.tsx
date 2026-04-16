@@ -41,6 +41,23 @@ function MyfeeLogoFooter() {
   );
 }
 
+function InstagramIcon() {
+  return (
+    <svg
+      viewBox="4 4 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="block h-7 w-7 shrink-0"
+      aria-hidden
+    >
+      <path
+        d="M 21.333 4 C 23.101 4 24.797 4.702 26.047 5.953 C 27.298 7.203 28 8.899 28 10.667 L 28 21.333 C 28 23.101 27.298 24.797 26.047 26.047 C 24.797 27.298 23.101 28 21.333 28 L 10.667 28 C 8.899 28 7.203 27.298 5.953 26.047 C 4.702 24.797 4 23.101 4 21.333 L 4 10.667 C 4 8.899 4.702 7.203 5.953 5.953 C 7.203 4.702 8.899 4 10.667 4 Z M 21.333 6.667 L 10.667 6.667 C 9.606 6.667 8.588 7.088 7.838 7.838 C 7.088 8.588 6.667 9.606 6.667 10.667 L 6.667 21.333 C 6.667 22.394 7.088 23.412 7.838 24.162 C 8.588 24.912 9.606 25.333 10.667 25.333 L 21.333 25.333 C 22.394 25.333 23.412 24.912 24.162 24.162 C 24.912 23.412 25.333 22.394 25.333 21.333 L 25.333 10.667 C 25.333 9.606 24.912 8.588 24.162 7.838 C 23.412 7.088 22.394 6.667 21.333 6.667 Z M 16 10.667 C 17.414 10.667 18.771 11.229 19.771 12.229 C 20.771 13.229 21.333 14.585 21.333 16 C 21.333 17.414 20.771 18.771 19.771 19.771 C 18.771 20.771 17.414 21.333 16 21.333 C 14.585 21.333 13.229 20.771 12.229 19.771 C 11.229 18.771 10.667 17.414 10.667 16 C 10.667 14.585 11.229 13.229 12.229 12.229 C 13.229 11.229 14.585 10.667 16 10.667 Z M 16 13.333 C 15.293 13.333 14.614 13.614 14.114 14.114 C 13.614 14.614 13.333 15.293 13.333 16 C 13.333 16.707 13.614 17.385 14.114 17.886 C 14.614 18.386 15.293 18.667 16 18.667 C 16.707 18.667 17.385 18.386 17.886 17.886 C 18.386 17.385 18.667 16.707 18.667 16 C 18.667 15.293 18.386 14.614 17.886 14.114 C 17.385 13.614 16.707 13.333 16 13.333 Z M 22 8.667 C 22.354 8.667 22.693 8.807 22.943 9.057 C 23.193 9.307 23.333 9.646 23.333 10 C 23.333 10.354 23.193 10.693 22.943 10.943 C 22.693 11.193 22.354 11.333 22 11.333 C 21.646 11.333 21.307 11.193 21.057 10.943 C 20.807 10.693 20.667 10.354 20.667 10 C 20.667 9.646 20.807 9.307 21.057 9.057 C 21.307 8.807 21.646 8.667 22 8.667 Z"
+        fill={TEAL}
+      />
+    </svg>
+  );
+}
+
 export default function FooterSection() {
   const [companyOpen, setCompanyOpen] = useState(false);
 
@@ -49,6 +66,24 @@ export default function FooterSection() {
       <div className="flex flex-col gap-10 md:grid md:grid-cols-3">
         <div className="shrink-0">
           <MyfeeLogoFooter />
+        </div>
+
+        <div>
+          <p className="mb-3 text-lg font-bold" style={{ color: TEAL }}>
+            협업문의
+          </p>
+          <p className="text-sm" style={{ color: TEAL }}>
+            입점 및 광고 문의 : myfee@lifeb.kr
+          </p>
+          <a
+            href="https://www.instagram.com/cocobab_official?igsh=MWN0cnpkeGhxaWE0Mw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex p-0 leading-none mt-2"
+            aria-label="인스타그램 페이지로 이동"
+          >
+            <InstagramIcon />
+          </a>
         </div>
 
         <div>
@@ -94,15 +129,6 @@ export default function FooterSection() {
 
           <p className="mt-6 text-sm leading-[140%]" style={{ color: TEAL }}>
             Copyright &copy; Life.B. All rights reserved.
-          </p>
-        </div>
-
-        <div>
-          <p className="mb-3 text-lg font-bold" style={{ color: TEAL }}>
-            협업문의
-          </p>
-          <p className="text-sm" style={{ color: TEAL }}>
-            입점 및 광고 문의 : myfee@lifeb.kr
           </p>
         </div>
       </div>
