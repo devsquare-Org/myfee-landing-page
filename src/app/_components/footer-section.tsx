@@ -76,7 +76,7 @@ export default function FooterSection() {
             입점 및 광고 문의 : myfee@lifeb.kr
           </p>
           <a
-            href="https://www.instagram.com/cocobab_official?igsh=MWN0cnpkeGhxaWE0Mw=="
+            href="https://www.instagram.com/myfee.kr"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex p-0 leading-none mt-2"
